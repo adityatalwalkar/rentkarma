@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {ethers} from "ethers"
 import Banner from "./Banner"
 import ViewPerson from "./ViewPerson"
+import Status from "./Status"
 
 const ViewAllAgreements=({state})=>{
     const [rentAgreements,setRentAgreements]=useState([]);

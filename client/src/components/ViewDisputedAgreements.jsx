@@ -14,6 +14,7 @@ const ViewDisputedAgreements=({state})=>{
     const INVALID_ID = "0x0000000000000000000000000000000000000000";
 
     const inspectionAssessment = async(rentAgreement) => {
+      try{
         let damages = prompt("Please enter the assessment of damages", "0");
         let text;
         if (damages == null || damages == "") {
@@ -24,6 +25,7 @@ const ViewDisputedAgreements=({state})=>{
             await p.wait();
             navigate("/");
         }
+      }catch(exp) {alert(exp);}
         
     } 
 
@@ -52,7 +54,7 @@ const ViewDisputedAgreements=({state})=>{
             <Banner/>
             <ViewPerson state={state}></ViewPerson>
 
-          <h3 style={{ textAlign: "center", marginTop: "20px" }}>Properties that require Guarantor</h3>           
+          <h3 style={{ textAlign: "center", marginTop: "20px" }}>Disputed Agreements - </h3>           
           <table width="100%" class="tableStyle">
                 <tbody >
                 <tr >
